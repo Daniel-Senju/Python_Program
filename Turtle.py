@@ -1,12 +1,17 @@
-# Python_Turtle
+# import Python_Turtle
 import turtle
- 
+
+#Создание окна
+#Creating a window 
 turtlePen = turtle.Turtle()
 window = turtle.Screen()
- 
+
+#Цвет окна
+#Window color
 window.bgcolor("black")
  
- 
+#Метод отрисовки
+#Rendering method 
 def polygon(n, size=80):
     if n > 2:
         angle = 360 / n
@@ -17,34 +22,24 @@ def polygon(n, size=80):
             turtlePen.left(angle)
             turtlePen.forward(size)
 
-def polygon1(m, size1=80):
-    if m > 2:
-        angle1 = 360 / m
- 
-        for m in range(0, m):
-            turtlePen.pensize(3)
-            turtlePen.color(color1)
-            turtlePen.left(angle1)
-            turtlePen.forward(size1) 
- 
+#Скорость отрисовки
+#Rendering speed
 turtlePen.speed(999)
  
+#Массив цветов
+#Array of colors
 colors = ['white','cyan','blue', 'green', 'red']
-color1 = ["black"]
  
 size = 40
-size1 = 120
- 
+
+#Отрисовка объектов и выбор цвета
+#Drawing objects and color selection
 for i in range (0, 60):
 	turtlePen.color(colors[i % 5])
 	polygon(4, size)
 	turtlePen.left(5)
 	size = size + 1
 
-for i in range (0, 80):
-	turtlePen.color(color1)
-	polygon1(4, size1)
-	turtlePen.right(1)
-	size1 = size1 - 1
-
+#Обновление окна
+#Updating the window
 windows.mainloop()
